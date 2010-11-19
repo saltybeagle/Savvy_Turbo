@@ -8,5 +8,5 @@ interface Savvy_Turbo_CacheableInterface
 {
     public function getCacheKey();
     public function run();
-    public function preRun();
+    public function preRun($cached);
 }
