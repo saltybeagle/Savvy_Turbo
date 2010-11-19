@@ -42,7 +42,7 @@ class Savvy_Turbo extends Savvy
             || ($object                    instanceof Savvy_ObjectProxy
                 && $object->getRawObject() instanceof Savvy_Turbo_CacheableInterface)) {
             $key = $object->getCacheKey();
-            
+
             // We have a valid key to store the output of this object.
             if ($key !== false && $data = $this->getCacheInterface()->get($key)) {
                 // Tell the object we have cached data and will output that.
@@ -58,14 +58,14 @@ class Savvy_Turbo extends Savvy
                 }
 
             }
-            
+
             if ($object instanceof Savvy_Turbo_PostRunReplacements) {
                 $data = $object->postRun($data);
             }
-            
+
             return $data;
         }
-        
+
         return parent::renderObject($object, $template);
 
     }
