@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
  <name>Savvy_Turbo</name>
- <channel>pear2.php.net</channel>
- <summary>Package Savvy_Turbo summary.
+ <channel>phpsavant.com</channel>
+ <summary>Savvy_Turbo adds output caching to Savvy rendered content
 </summary>
  <description>
-Package detailed description here (found in README)</description>
+Savvy content can be cached for faster rendering. Savvy_Turbo allows rendered
+content to be cached, and recalled for subsequent requests. For basic use,
+instead of creating a new Savvy object, create a Savvy_Turbo object. In models
+you'd like to have cached, implement the CacheableInterface.</description>
  <lead>
-  <name>Your Name</name>
-  <user>handle</user>
-  <email>handle@php.net</email>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
   <active>yes</active>
  </lead>
  <date>2010-11-19</date>
- <time>13:28:56</time>
+ <time>14:06:11</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -28,7 +31,13 @@ Package detailed description here (found in README)</description>
 Package Savvy_Turbo API release notes for version 0.1.0.</notes>
  <contents>
   <dir name="/">
-   <file role="php" name="php/PEAR2/Savvy/Turbo/Main.php"/>
+   <file role="php" name="php/Savvy/Turbo/PostRunReplacements.php"/>
+   <file role="php" name="php/Savvy/Turbo/CacheInterface/UNLCacheLite.php"/>
+   <file role="php" name="php/Savvy/Turbo/CacheInterface/Mock.php"/>
+   <file role="php" name="php/Savvy/Turbo/CacheInterface/CacheLite.php"/>
+   <file role="php" name="php/Savvy/Turbo/CacheInterface.php"/>
+   <file role="php" name="php/Savvy/Turbo/CacheableInterface.php"/>
+   <file role="php" name="php/Savvy/Turbo.php"/>
   </dir>
  </contents>
  <dependencies>
@@ -43,7 +52,13 @@ Package Savvy_Turbo API release notes for version 0.1.0.</notes>
  </dependencies>
  <phprelease>
   <filelist>
-   <install name="php/PEAR2/Savvy/Turbo/Main.php" as="PEAR2/Savvy/Turbo/Main.php"/>
+   <install name="php/Savvy/Turbo.php" as="Savvy/Turbo.php"/>
+   <install name="php/Savvy/Turbo/CacheableInterface.php" as="Savvy/Turbo/CacheableInterface.php"/>
+   <install name="php/Savvy/Turbo/CacheInterface.php" as="Savvy/Turbo/CacheInterface.php"/>
+   <install name="php/Savvy/Turbo/CacheInterface/CacheLite.php" as="Savvy/Turbo/CacheInterface/CacheLite.php"/>
+   <install name="php/Savvy/Turbo/CacheInterface/Mock.php" as="Savvy/Turbo/CacheInterface/Mock.php"/>
+   <install name="php/Savvy/Turbo/CacheInterface/UNLCacheLite.php" as="Savvy/Turbo/CacheInterface/UNLCacheLite.php"/>
+   <install name="php/Savvy/Turbo/PostRunReplacements.php" as="Savvy/Turbo/PostRunReplacements.php"/>
   </filelist>
  </phprelease>
 </package>
