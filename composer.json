@@ -1,0 +1,7 @@
+{
+    "name": "saltybeagle/savvy_turbo",
+    "description": "a simple caching library for Savvy",
+    "autoload": {
+        "psr-0": { "Savvy_Turbo": "src/" }
+    }
+}
